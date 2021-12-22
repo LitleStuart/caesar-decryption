@@ -1,0 +1,70 @@
+function getRussianAlphabet() {
+  const result = new Map();
+  result.set("а", 8.01);
+  result.set("б", 1.59);
+  result.set("в", 4.54);
+  result.set("г", 1.7);
+  result.set("д", 2.98);
+  result.set("е", 8.45);
+  result.set("ж", 0.94);
+  result.set("з", 1.65);
+  result.set("и", 7.35);
+  result.set("й", 1.21);
+  result.set("к", 3.49);
+  result.set("л", 4.4);
+  result.set("м", 3.21);
+  result.set("н", 6.7);
+  result.set("о", 10.97);
+  result.set("п", 2.81);
+  result.set("р", 4.73);
+  result.set("с", 5.47);
+  result.set("т", 6.26);
+  result.set("у", 2.62);
+  result.set("ф", 0.26);
+  result.set("х", 0.97);
+  result.set("ц", 0.48);
+  result.set("ч", 1.44);
+  result.set("ш", 0.73);
+  result.set("щ", 0.36);
+  result.set("ъ", 0.04);
+  result.set("ы", 1.9);
+  result.set("ь", 1.74);
+  result.set("э", 0.32);
+  result.set("ю", 0.64);
+  result.set("я", 2.01);
+  return result;
+}
+
+function getEnglishAlphabet() {
+  const result = new Map();
+  result.set("e", 12.7);
+  result.set("t", 9.06);
+  result.set("a", 8.17);
+  result.set("o", 7.51);
+  result.set("i", 6.97);
+  result.set("n", 6.75);
+  result.set("s", 6.33);
+  result.set("h", 6.09);
+  result.set("r", 5.99);
+  result.set("d", 4.25);
+  result.set("l", 4.03);
+  result.set("c", 2.78);
+  result.set("u", 2.76);
+  result.set("m", 2.41);
+  result.set("w", 2.36);
+  result.set("f", 2.23);
+  result.set("g", 2.02);
+  result.set("y", 1.97);
+  result.set("p", 1.93);
+  result.set("b", 1.49);
+  result.set("v", 0.98);
+  result.set("k", 0.77);
+  result.set("x", 0.15);
+  result.set("j", 0.15);
+  result.set("q", 0.1);
+  result.set("z", 0.05);
+  return result;
+}
+
+exports.getRussianAlphabet = getRussianAlphabet;
+exports.getEnglishAlphabet = getEnglishAlphabet;
