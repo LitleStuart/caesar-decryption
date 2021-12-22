@@ -17,14 +17,15 @@ function encryptRussian(data, SHIFT) {
 }
 
 function encryptRussianLetter(letter, SHIFT) {
+  const LANG_POWER = 32;
   const charCode = letter.charCodeAt(0);
   let FIRST_CHAR_CODE;
-  const LANG_POWER = 32;
   if (charCode < 1072) FIRST_CHAR_CODE = 1040;
   else FIRST_CHAR_CODE = 1072;
+  SHIFT = Number(SHIFT);
+  if (SHIFT < 0) SHIFT = LANG_POWER + SHIFT;
   return String.fromCharCode(
-    FIRST_CHAR_CODE +
-      ((charCode - FIRST_CHAR_CODE + Number(SHIFT)) % LANG_POWER)
+    FIRST_CHAR_CODE + ((charCode - FIRST_CHAR_CODE + SHIFT) % LANG_POWER)
   );
 }
 
@@ -39,14 +40,15 @@ function encryptEnglish(data, SHIFT) {
 }
 
 function encryptEnglishLetter(letter, SHIFT) {
+  const LANG_POWER = 26;
   const charCode = letter.charCodeAt(0);
   let FIRST_CHAR_CODE;
-  const LANG_POWER = 26;
   if (charCode <= 90) FIRST_CHAR_CODE = 65;
   else FIRST_CHAR_CODE = 97;
+  SHIFT = Number(SHIFT);
+  if (SHIFT < 0) SHIFT = LANG_POWER + SHIFT;
   return String.fromCharCode(
-    FIRST_CHAR_CODE +
-      ((charCode - FIRST_CHAR_CODE + Number(SHIFT)) % LANG_POWER)
+    FIRST_CHAR_CODE + ((charCode - FIRST_CHAR_CODE + SHIFT) % LANG_POWER)
   );
 }
 

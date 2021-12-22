@@ -12,7 +12,7 @@ if (args[2] === "code") {
   }
 
   const lang = args[6];
-  if (lang != "ru" || lang != "en") {
+  if (lang != "ru" && lang != "en") {
     console.log("ru/en expected");
     return;
   }
@@ -50,7 +50,7 @@ if (args[2] === "code") {
   }
 
   const lang = args[5];
-  if (lang != "ru" || lang != "en") {
+  if (lang != "ru" && lang != "en") {
     console.log("ru/en expected");
     return;
   }
