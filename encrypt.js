@@ -27,6 +27,7 @@ function encryptEnglishLetter(letter, SHIFT) {
       FIRST_CHAR_CODE + ((charCode - FIRST_CHAR_CODE + SHIFT) % LANG_POWER)
     );
   }
+  return;
 }
 
 function encrypt(data, SHIFT, lang) {
