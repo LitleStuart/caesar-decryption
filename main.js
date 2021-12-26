@@ -25,7 +25,7 @@ if (args[2] === "code") {
 
   let data;
   try {
-    data = fs.readFileSync(args[3], "utf-8");
+    data = fs.readFileSync(args[3], "utf-8").replace(/ё/g, "е").replace(/Ё/g, "Е");
   } catch {
     console.log("File not found :(");
     return;
@@ -43,7 +43,7 @@ if (args[2] === "code") {
 
   let data;
   try {
-    data = fs.readFileSync(args[3], "utf-8");
+    data = fs.readFileSync(args[3], "utf-8").replace(/ё/g, "е").replace(/Ё/g, "Е");
   } catch {
     console.log("File not found :(");
     return;
